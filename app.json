@@ -1,12 +1,13 @@
 {
   "expo": {
     "name": "InfoFatecCotia",
+    "scheme": "infofateccotia",
     "slug": "InfoFatecCotia",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -21,10 +22,13 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.moisesg01.InfoFatecCotia",
+      "minSdkVersion": 24
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
