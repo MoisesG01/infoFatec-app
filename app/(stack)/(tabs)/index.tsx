@@ -170,6 +170,41 @@ export default function Index() {
             </Text>
           </LinearGradient>
 
+          {/* Card de Teste Vocacional */}
+          <Link href="/(stack)/teste-vocacional" asChild>
+            <TouchableOpacity style={styles.testeVocacionalCard} activeOpacity={0.9}>
+              <LinearGradient
+                colors={[
+                  "rgba(0, 212, 255, 0.9)",
+                  "rgba(59, 130, 246, 0.8)",
+                  "rgba(147, 51, 234, 0.7)",
+                ]}
+                style={styles.testeVocacionalGradient}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+              >
+                <View style={styles.testeVocacionalContent}>
+                  <View style={styles.testeVocacionalIconContainer}>
+                    <Text style={styles.testeVocacionalIcon}>🎯</Text>
+                  </View>
+                  <View style={styles.testeVocacionalTextContainer}>
+                    <Text style={styles.testeVocacionalTitle}>
+                      Teste Vocacional
+                    </Text>
+                    <Text style={styles.testeVocacionalDescription}>
+                      Descubra qual curso da Fatec Cotia combina mais com você!
+                    </Text>
+                  </View>
+                  <Ionicons
+                    name="arrow-forward-circle"
+                    size={32}
+                    color="#0f172a"
+                  />
+                </View>
+              </LinearGradient>
+            </TouchableOpacity>
+          </Link>
+
           {/* Estatísticas Discretas */}
           <View style={styles.statsContainer}>
             <View style={styles.statCard}>
@@ -480,6 +515,55 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "600",
     marginBottom: 16,
+  },
+  testeVocacionalCard: {
+    marginBottom: 24,
+    borderRadius: 24,
+    overflow: "hidden",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.3,
+    shadowRadius: 18,
+    elevation: 12,
+  },
+  testeVocacionalGradient: {
+    padding: 24,
+    borderWidth: 2,
+    borderColor: "rgba(255, 255, 255, 0.3)",
+  },
+  testeVocacionalContent: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  testeVocacionalIconContainer: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    backgroundColor: "rgba(15, 23, 42, 0.2)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 16,
+  },
+  testeVocacionalIcon: {
+    fontSize: 32,
+  },
+  testeVocacionalTextContainer: {
+    flex: 1,
+  },
+  testeVocacionalTitle: {
+    fontSize: 20,
+    fontWeight: "900",
+    color: "#0f172a",
+    marginBottom: 6,
+    textShadowColor: "rgba(255, 255, 255, 0.3)",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 2,
+  },
+  testeVocacionalDescription: {
+    fontSize: 14,
+    color: "rgba(15, 23, 42, 0.8)",
+    lineHeight: 20,
+    fontWeight: "600",
   },
   statsContainer: {
     flexDirection: "row",
